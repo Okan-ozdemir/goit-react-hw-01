@@ -22,7 +22,7 @@ const TransactionHistory = ({ items = [] }) => {
           marginBottom: "20px",
         }}
       >
-        İşlem Geçmişi
+        Transaction History
       </h2>
 
       <table
@@ -44,7 +44,7 @@ const TransactionHistory = ({ items = [] }) => {
                 borderBottom: "1px solid #ddd",
               }}
             >
-              İşlem Türü
+              Type
             </th>
             <th
               style={{
@@ -53,7 +53,7 @@ const TransactionHistory = ({ items = [] }) => {
                 borderBottom: "1px solid #ddd",
               }}
             >
-              Miktar
+              Amount
             </th>
             <th
               style={{
@@ -62,7 +62,7 @@ const TransactionHistory = ({ items = [] }) => {
                 borderBottom: "1px solid #ddd",
               }}
             >
-              Para Birimi
+              Currency
             </th>
           </tr>
         </thead>
