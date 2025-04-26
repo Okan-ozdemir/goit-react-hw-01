@@ -1,61 +1,65 @@
-.profile {
-  width: 300px;
-  margin: 0 auto;
-  border-radius: 8px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+.profileContainer {
   font-family: Arial, sans-serif;
+  max-width: 250px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
 }
 
-.description {
-  padding: 30px;
+.userInfo {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .avatar {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  margin: 0 auto 20px;
   object-fit: cover;
+  margin-bottom: 10px;
 }
 
 .name {
-  font-size: 20px;
   font-weight: bold;
-  margin-bottom: 8px;
+  font-size: 1.2rem;
+  margin: 5px 0;
 }
 
-.tag,
+.username {
+  color: #666;
+  margin: 5px 0;
+}
+
 .location {
-  color: #768696;
-  margin-bottom: 8px;
+  color: #666;
+  margin: 5px 0;
+  font-size: 0.9rem;
 }
 
-.stats {
+.statsList {
   display: flex;
-  list-style: none;
+  justify-content: space-between;
   padding: 0;
   margin: 0;
-  background-color: #f3f6f9;
-  border-top: 1px solid #e4e9f0;
+  list-style: none;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
 }
 
-.stats li {
-  flex: 1;
-  padding: 15px 0;
-  text-align: center;
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.label {
-  display: block;
-  font-size: 12px;
-  color: #768696;
-  margin-bottom: 4px;
+.statLabel {
+  font-size: 0.8rem;
+  color: #666;
 }
 
-.quantity {
-  display: block;
+.statValue {
   font-weight: bold;
+  font-size: 1rem;
 }
