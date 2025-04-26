@@ -1,0 +1,27 @@
+.deneme {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.deneme thead {
+  background-color: black;
+}
+
+.deneme thead th {
+  color: white;
+  padding: 10px;
+  text-align: left;
+}
+
+.deneme tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.deneme tbody tr:nth-child(odd) {
+  background-color: white;
+}
+
+.deneme td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}

@@ -1,31 +1,31 @@
 import React from "react";
+import styles from "./FriendList.module.css";
 
-const friends = [
-  { name: "Mango", status: "Online", icon: "🐱" },
-  { name: "Kiwi", status: "Offline", icon: "🐦" },
-  { name: "Ajax", status: "Online", icon: "🐶" },
-  { name: "Jay", status: "Online", icon: "🦜" },
-  { name: "Poly", status: "Offline", icon: "🐷" },
-];
-
-const FriendList = () => {
+const FriendList = ({ friends }) => {
   return (
-    <>
-      <div className="friend-list">
-        {friends.map((friend, index) => (
-          <div key={index} className="friend-item">
-            <span className="icon">{friend.icon}</span>
-            <div className="friend-info">
-              <span className="name">{friend.name}</span>
-              <span className={`status ${friend.status.toLowerCase()}`}>
-                {friend.status}
-              </span>
-            </div>
-          </div>
-        ))}
-      </div>
-    </>
+    <ul className={styles["friend-list"]}>
+      {friends.map((friend) => (
+        <li key={friend.id}>
+          <FriendListItem
+            avatar={friend.avatar}
+            name={friend.name}
+            isOnline={friend.isOnline}
+          />
+        </li>
+      ))}
+    </ul>
   );
 };
 
+const FriendListItem = ({ avatar, name, isOnline }) => {
+  const statusClass = isOnline ? styles.online : styles.offline;
+
+  return (
+    <div className={styles["friend-card"]}>
+      <img src={avatar} alt="Avatar" width="48" />
+      <p>{name}</p>
+      <p className={statusClass}>{isOnline ? "Online" : "Offline"}</p>
+    </div>
+  );
+};
 export default FriendList;
